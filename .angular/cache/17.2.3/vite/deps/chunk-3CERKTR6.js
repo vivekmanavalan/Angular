@@ -7,7 +7,7 @@ import {
   coerceNumberProperty,
   getRtlScrollAxisType,
   supportsScrollBehavior
-} from "./chunk-ES735E5S.js";
+} from "./chunk-SKCLUD2X.js";
 import {
   DOCUMENT
 } from "./chunk-UPKIFLEL.js";
@@ -2565,4 +2565,4 @@ export {
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-PA32WWJT.js.map
+//# sourceMappingURL=chunk-3CERKTR6.js.map

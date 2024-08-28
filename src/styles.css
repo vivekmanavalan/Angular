@@ -1,4 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.mat-mdc-slide-toggle.mat-accent {
+    --mdc-switch-selected-track-color: green !important;
+    --mdc-switch-selected-handle-color: green !important;
+    --mdc-switch-selected-focus-state-layer-color: green !important;
+    --mdc-switch-selected-handle-color: green !important;
+    --mdc-switch-selected-hover-state-layer-color: green !important;; 
+    --mdc-switch-selected-pressed-state-layer-color: green !important;;
+    --mdc-switch-selected-focus-handle-color: green !important; 
+    --mdc-switch-selected-hover-handle-color: green !important; 
+    --mdc-switch-selected-pressed-handle-color: green !important;;
+    --mdc-switch-selected-focus-track-color: green !important;
+    --mdc-switch-selected-hover-track-color: green !important;
+    --mdc-switch-selected-pressed-track-color: green !important;;
+}
