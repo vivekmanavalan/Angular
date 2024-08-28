@@ -1,0 +1,15 @@
+<h1 mat-dialog-title>{{ data.name }}</h1>
+    <mat-tab-group>
+      <mat-tab label="Name">
+        <router-outlet></router-outlet>
+        <nav>
+          <a routerLink="name" routerLinkActive="active">Name</a>
+          <a routerLink="position" routerLinkActive="active">Position</a>
+        </nav>
+      </mat-tab>
+    </mat-tab-group>
+    <div mat-dialog-actions>
+      <button mat-button mat-dialog-close>Close</button>
+    </div>
+
+    

@@ -1,0 +1,13 @@
+<h3>Player Registration Form</h3>
+<form>
+    Player Name: <input type="text" name="playerName" [(ngModel)] = "name" />
+    <br>Position: <input type="text" name="position" [(ngModel)] = "position" />
+    <br>Age: <input type="text" name="age" [(ngModel)] = "age" />
+    <br>Team: <input type="text" name="team" [(ngModel)] = "team" />
+    <br><button class = "btn btn-success" type = "submit" (click)="handleSubmit()">Submit</button>
+    <br><br>
+
+    <!-- This is an example of parent to child as the list component is inside the form component -->
+    <!-- <app-table [playerData] = "records"></app-table> -->
+    <app-lifecycle [name] = "name" [playerData]="records"></app-lifecycle>
+</form>

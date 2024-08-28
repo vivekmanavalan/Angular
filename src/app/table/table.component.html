@@ -1,0 +1,36 @@
+<!-- Sending data from child to parent -->
+<app-form (playerDataAdded)="handleDataAdded($event)"></app-form>
+<h3>Lifecycle methods in angular components</h3>
+  <app-lifecycle></app-lifecycle>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3>{{title}}</h3>
+    </div>
+    <div class="panel-body table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Age</th>
+                    <th>Team</th>
+                    <th>IsActive</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr [ngClass]="{'table-light':e, 'table-dark': o}" *ngFor="let baller of ballers; let i=index; let o = odd; let e=even" (click)="openDialog(baller)">
+                    <td>{{i+1}}</td>
+                    <td>{{baller.name}}</td>
+                    <td>{{baller.position}}</td>
+                    <td>{{baller.age}}</td>
+                    <td>{{baller.team}}</td>
+                    <td>
+                        <mat-slide-toggle [(ngModel)]="baller.isActive" (change) ="toggleIsActive(baller)">
+                        </mat-slide-toggle>
+                      </td>
+                </tr>
+
+        </table>
+    </div>
+</div>

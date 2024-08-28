@@ -1,0 +1,36 @@
+<div>
+    <h2>Data binding component</h2>
+    <br><br>
+    Name: <input type = "text" (input)="handleInput($event)" />
+  Colour: <input *ngIf="name.length!=0" type="checkbox" [(ngModel)]=enableColour/>
+  Italic: <input *ngIf="name.length!=0" type="checkbox" name="Italic" [(ngModel)]=enableItalic/>
+
+  <br>
+  <h3 [ngClass]="{'colour': enableColour, 'italic': enableItalic}">{{name}}</h3>
+  <h3>Ng Switch Case</h3>
+  <!-- ngModel is a directive that binds an input and this is a two way binding. -->
+  Enter number: <input type="number" [(ngModel)]=num>
+  <div [ngSwitch]=num>
+    <div *ngSwitchCase=1>You selected 1</div>
+    <div *ngSwitchCase=2>You selected 2</div>
+    <div *ngSwitchCase="3">You selected 3</div>
+    <div *ngSwitchDefault>Invalid number</div>
+  </div>
+
+  <!-- Show or hide based on checkbox -->
+  Show or Hide: <input type="checkbox" [(ngModel)]=show />
+
+  <div>
+    <!-- <p *ngIf="show; else elseBlock">Welcome to Angular basics</p> -->
+    <p *ngIf="show; then thenBlock; else elseBlock"></p>
+    <ng-template #thenBlock>
+      <p>Welcome to Angular basics</p>
+    </ng-template>
+    <ng-template #elseBlock>
+      <p>Hidden</p>
+    </ng-template>
+  </div>
+  <div>
+    <app-pipeformat></app-pipeformat>
+  </div>
+</div>
