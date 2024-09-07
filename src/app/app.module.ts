@@ -10,12 +10,20 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DialogComponent } from './dialog/dialog.component';
+import { AgTableComponent } from './ag-table/ag-table.component';
+import { AgGridModule } from 'ag-grid-angular';
+import { ToggleRendererComponent } from './toggle-renderer/toggle-renderer.component';
+import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
     AppComponent,
     AccessComponent,
-    DialogComponent
+    DialogComponent,
+    AgTableComponent,
+    ToggleRendererComponent,
+    ConfirmDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +31,9 @@ import { DialogComponent } from './dialog/dialog.component';
     HttpClientModule,
     MatSlideToggleModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    AgGridModule,
+    MatDialogModule
   ],
   providers: [AccessdataService],
   bootstrap: [AppComponent]
