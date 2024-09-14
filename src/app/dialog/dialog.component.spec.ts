@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { DialogComponent } from './dialog.component';
 
 describe('DialogComponent', () => {
@@ -8,10 +8,15 @@ describe('DialogComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [DialogComponent]
-    })
-    .compileComponents();
-    
+      declarations: [DialogComponent],
+      providers: [
+        { provide: MatDialogRef, useValue: {} },
+        { provide: MAT_DIALOG_DATA, useValue: { changes: ['Change 1', 'Change 2'] } }
+      ]
+    }).compileComponents();
+  });
+
+  beforeEach(() => {
     fixture = TestBed.createComponent(DialogComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
@@ -19,5 +24,11 @@ describe('DialogComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should display changes', () => {
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('ul').textContent).toContain('Change 1');
+    expect(compiled.querySelector('ul').textContent).toContain('Change 2');
   });
 });
